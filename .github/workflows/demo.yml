@@ -21,11 +21,11 @@ jobs:
         name: MSVC version info
       - run: cargo build --release -vv
         name: MSVC release
-      - run: cargo auditable build --release -vv
+      - run: RUST_LOG=debug cargo auditable build --release -vv
         name: Auditable MSVC release
       - run: cargo rustc --target x86_64-pc-windows-gnu -- -vV
         name: GNU version info
       - run: cargo build --target x86_64-pc-windows-gnu --release -vv
         name: GNU release
-      - run: cargo auditable build --target x86_64-pc-windows-gnu --release -vv
+      - run: RUST_LOG=debug cargo auditable build --target x86_64-pc-windows-gnu --release -vv
         name: Auditable GNU release
