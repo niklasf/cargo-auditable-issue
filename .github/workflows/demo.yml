@@ -16,6 +16,7 @@ jobs:
         with:
           msystem: mingw64
           install: mingw-w64-x86_64-rust
+          release: false
       - run: cargo install cargo-auditable --git https://github.com/rust-secure-code/cargo-auditable --force
       - run: cargo rustc -- -vV
         name: MSVC version info
